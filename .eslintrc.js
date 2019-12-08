@@ -16,9 +16,8 @@ module.exports = {
     "rules": {
       "linebreak-style": 0,
       "max-len": ["error", { "code": 120, "tabWidth": 2 }],
-      "arrow-parens": [2, "as-needed"]
-      // "no-restricted-syntax": 0,
-      // "no-plusplus": 0,
-      // "array-callback-return": 0,
+      "arrow-parens": [2, "as-needed"],
+
+      "no-param-reassign": "off"
   }
 };

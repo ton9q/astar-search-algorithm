@@ -13,7 +13,7 @@
         <h1>JavaScript A* Search Algorithm</h1>
       </header>
 
-      <section id="settingsContent">
+      <div id="settingsContent">
         <div id="controls" class="clear">
           <div class="wallFrequencyWrapper">
             <label for="wallFrequencySelect">Wall Frequency: </label>
@@ -39,42 +39,58 @@
             </select>
           </div>
 
-          <div class="checkDebugCheckbox">
+          <div class="cellSizeWrapper">
+              <label for="selectCellSize">Cell Size: </label>
+              <select id="selectCellSize" name="selectCellSize">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20" selected>20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+
+          <div class="checkDebugCheckbox checkboxWrapper">
             <input type="checkbox" name="checkDebug" id="checkDebug" />
             <label for="checkDebug">Show search info</label>
           </div>
 
-          <div class="searchDiagonalCheckbox">
+          <div class="searchDiagonalCheckbox checkboxWrapper">
             <input type="checkbox" name="searchDiagonal" id="searchDiagonal" />
             <label for="searchDiagonal">Allow diagonal movement</label>
           </div>
 
-          <div class="generateWeightsCheckbox">
+          <div class="generateWeightsCheckbox checkboxWrapper">
             <input type="checkbox" name="generateWeights" id="generateWeights" />
             <label for="generateWeights">Add random weights</label>
 
             <fieldset id="weightsKey">
               <legend>Key:</legend>
-              <div>
-                <div class="itemKey weight1" id="keyWeight1" />
+
+              <div class="weightKey">
+                <div class="itemKey weight1" id="keyWeight1"></div>
                 <span class="text">Weight of 1</span>
               </div>
-              <div>
-                <div class="itemKey weight3" id="keyWeight3" />
+
+              <div class="weightKey">
+                <div class="itemKey weight3" id="keyWeight3"></div>
                 <span class="text">Weight of 3</span>
               </div>
-              <div>
-                <div class="itemKey weight5" id="keyWeight5" />
-                <span class="text">Weight of 5</span>
+
+              <div class="weightKey">
+                <div class="itemKey weight5" id="keyWeight5"></div>
+                 <div class="text">Weight of 5</div>
               </div>
-              <div>
-                <div class="itemKey wall" id="keyWall" />
+
+              <div class="weightKey">
+                <div class="itemKey wall" id="keyWall"></div>
                 <span class="text">Wall (imapassable)</span>
               </div>
             </fieldset>
           </div>
 
-          <div class="displayWeightsCheckbox">
+          <div class="displayWeightsCheckbox checkboxWrapper">
             <input type="checkbox" name="displayWeights" id="displayWeights" />
             <label for="displayWeights">Display weight values</label>
           </div>
