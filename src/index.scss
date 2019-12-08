@@ -1,0 +1,92 @@
+#message {
+  color: #f00;
+  font-size: 1.2em;
+}
+
+.checkboxWrapper {
+  margin: 10px 0;
+
+  label,
+  input {
+    cursor: pointer; 
+  }
+}
+
+#searchGrid {
+  width: 800px;
+  height: 800px;
+  position: relative;
+}
+
+#btnGenerate {
+  cursor: pointer;
+}
+
+#main {
+  overflow-x: auto;
+}
+
+
+/*** main ***/
+
+.gridItem {
+  display: block;
+  border: 1px solid #bbb;
+  float: left;
+  line-height: 12px;
+  font-size: 10px;
+  cursor: pointer;
+
+  &.weight1 {
+    background-color: #ffffff;
+  }
+  &.weight3 {
+    background-color: #d6eaff;
+  }
+  &.weight5 {
+    background-color: #abd1ff;
+  }
+  &.start {
+    background-color: #ff703f;
+  }
+  // active only after weight classes for overwrite!
+  &.active { 
+    background-color: #ff703f;
+  }
+  &.wall {
+    background-color: #000000;
+  }
+}
+
+
+/*** generateWeightsCheckbox ***/
+
+#weightsKey {
+  display: none;
+  max-width: 300px;
+
+  .weightKey {
+    display: flex;
+    margin: 5px 0;
+
+    .itemKey {
+      border: 1px solid #bbb;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+
+      &.weight1 {
+        background-color: #ffffff;
+      }
+      &.weight3 {
+        background-color: #d6eaff;
+      }
+      &.weight5 {
+        background-color: #abd1ff;
+      }
+      &.wall {
+        background-color: #000000;
+      }
+    }
+  }
+}
